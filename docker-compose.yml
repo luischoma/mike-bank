@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+  mysql:
+    image: mysql:8.0
+    restart: on-failure
+    environment:
+      MYSQL_USER: "app"
+      MYSQL_PASSWORD : "app"
+      MYSQL_HOST : "mysql"
+      MYSQL_DATABASE : app
+      MYSQL_ROOT_PASSWORD: "senharoot"
+    ports:
+     - 3306:3306
+    volumes:
+     - ./mysql_data:/var/lib/mysql
+     - ./database:/docker-entrypoint-initdb.d
+
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - "mysql:db"
+    environment:
+      PMA_USER: "root"
+      PMA_PASSWORD: "senharoot"
+      PMA_HOST: "db"
+    ports:
+      - 8080:80
