@@ -1515,6 +1515,11 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
+sql-query@^0.1.27:
+  version "0.1.27"
+  resolved "https://registry.yarnpkg.com/sql-query/-/sql-query-0.1.27.tgz#f854672e1e3c09df773d8b343c6ad0902f92d905"
+  integrity sha512-XXK6W6n0D18YspS/7TziKln8ij9RUnpDzl+qr2hUOqEqrhuilGPhbKBYQ1dkfYoQ0ViNtr2y8RKut06nkAkx2w==
+
 sqlstring@2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/sqlstring/-/sqlstring-2.3.1.tgz#475393ff9e91479aea62dcaf0ca3d14983a7fb40"
