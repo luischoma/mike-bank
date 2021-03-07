@@ -4,6 +4,7 @@
     "main": "index.js",
     "author": "Luis Choma <luis.choma@g.globo>",
     "license": "MIT",
+    "type": "module",
     "dependencies": {
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
