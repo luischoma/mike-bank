@@ -1,18 +1,18 @@
 import sql from 'sql-query'
 
 const sqlQuery = sql.Query()
-const sqlSelect = sqlQuery.select()
-const sqlInsert = sqlQuery.insert()
 
 export const getAll = (connection, callback) => {
+  const sqlSelect = sqlQuery.select()
+
   const selectQuery = sqlSelect.from('user').build()
 
   connection.query(selectQuery, callback)
-
-  connection.end()
 }
 
 export const getById = (connection, params, callback) => {
+  const sqlSelect = sqlQuery.select()
+
   const selectQuery = sqlSelect.from('user').where(
     {
       id: params.id,
@@ -20,11 +20,10 @@ export const getById = (connection, params, callback) => {
   ).build()
 
   connection.query(selectQuery, callback)
-
-  connection.end()
 }
 
 export const create = (connection, body, callback) => {
+  const sqlInsert = sqlQuery.insert()
   const {
     id,
     name,
@@ -40,6 +39,4 @@ export const create = (connection, body, callback) => {
   }).build()
 
   connection.query(insertQuery, callback)
-
-  connection.end()
 }
