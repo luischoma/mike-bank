@@ -13,6 +13,21 @@ export const getAll = (connection, callback) => {
 }
 
 export const create = (connection, body, callback) => {
-  console.log('patiooo ', body)
-  // connection.query('SELECT * FROM user', callback)
+  const {
+    id,
+    name,
+    balance,
+    password,
+  } = body || {}
+
+  const insertQuery = sqlInsert.into('user').set({
+    id,
+    name,
+    balance,
+    password,
+  }).build()
+
+  connection.query(insertQuery, callback)
+
+  connection.end()
 }
