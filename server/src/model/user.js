@@ -12,6 +12,18 @@ export const getAll = (connection, callback) => {
   connection.end()
 }
 
+export const getById = (connection, params, callback) => {
+  const selectQuery = sqlSelect.from('user').where(
+    {
+      id: params.id,
+    },
+  ).build()
+
+  connection.query(selectQuery, callback)
+
+  connection.end()
+}
+
 export const create = (connection, body, callback) => {
   const {
     id,

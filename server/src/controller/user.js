@@ -1,4 +1,8 @@
-import { create, getAll } from '../model/user.js'
+import {
+  create,
+  getAll,
+  getById,
+} from '../model/user.js'
 
 export const userController = {
   getAllUsers: (req, res) => {
@@ -12,5 +16,11 @@ export const userController = {
       if (error) console.log('Erro ao fazer cadastro no banco ', error)
     })
     res.end()
+  },
+  getUserById: (req, res) => {
+    getById(req.con, req.params, (error, results) => {
+      if (error) console.log('Erro ao fazer query ao banco')
+      res.send(results)
+    })
   },
 }
