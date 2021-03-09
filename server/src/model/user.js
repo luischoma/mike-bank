@@ -2,14 +2,6 @@ import sql from 'sql-query'
 
 const sqlQuery = sql.Query()
 
-export const getAll = (connection, callback) => {
-  const sqlSelect = sqlQuery.select()
-
-  const selectQuery = sqlSelect.from('user').build()
-
-  connection.query(selectQuery, callback)
-}
-
 export const getById = (connection, params, callback) => {
   const sqlSelect = sqlQuery.select()
 
