@@ -15,10 +15,12 @@ export const transactionController = {
       res.send(results.map((r) => parseTransaction(r)))
     })
   },
+
   createTransaction: (req, res) => {
     create(req.con, req.body, (error, results) => {
       if (error) console.log('Erro ao fazer cadastro no banco ', error)
     })
+
     res.end()
   },
 }
