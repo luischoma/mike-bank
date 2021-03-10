@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 06, 2021 at 11:53 PM
+-- Generation Time: Mar 10, 2021 at 01:11 AM
 -- Server version: 8.0.23
 -- PHP Version: 7.4.15
 
@@ -32,7 +32,7 @@ CREATE TABLE `transaction` (
   `kind` enum('WITHDRAWAL','PAYMENT','DEPOSIT') NOT NULL,
   `author` varchar(100) NOT NULL,
   `amount` double NOT NULL,
-  `date` date NOT NULL
+  `date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -45,7 +45,7 @@ CREATE TABLE `user` (
   `id` varchar(100) NOT NULL,
   `name` varchar(20) NOT NULL,
   `balance` double NOT NULL,
-  `password` varchar(6) NOT NULL
+  `password` char(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -56,10 +56,9 @@ CREATE TABLE `user` (
 -- Indexes for table `transaction`
 --
 ALTER TABLE `transaction`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `author` (`author`);
 
-ALTER TABLE `transaction`
-  ADD PRIMARY KEY (`id`);
 --
 -- Indexes for table `user`
 --
