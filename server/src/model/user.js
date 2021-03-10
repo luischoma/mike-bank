@@ -1,4 +1,5 @@
 import sql from 'sql-query'
+import md5 from 'md5'
 
 const sqlQuery = sql.Query()
 
@@ -27,7 +28,7 @@ export const create = (connection, body, callback) => {
     id,
     name,
     balance,
-    password,
+    password: md5(password),
   }).build()
 
   connection.query(insertQuery, callback)
