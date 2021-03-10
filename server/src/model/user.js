@@ -33,3 +33,17 @@ export const create = (connection, body, callback) => {
 
   connection.query(insertQuery, callback)
 }
+
+export const authenticate = (connection, body, callback) => {
+  const sqlSelect = sqlQuery.select()
+
+  const selectQuery = sqlSelect.from('user')
+    .select('password')
+    .where(
+      {
+        id: body.id,
+      },
+    ).build()
+
+  connection.query(selectQuery, callback)
+}
