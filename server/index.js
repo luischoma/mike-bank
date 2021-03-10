@@ -1,5 +1,7 @@
 import express from 'express'
 import userRouter from './src/routes/user.js'
+import transactionRouter from './src/routes/transaction.js'
+
 import { databaseClient } from './src/clients/db/client.js'
 
 const PORT = 3001
@@ -15,6 +17,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/user', userRouter)
+app.use('/transaction', transactionRouter)
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`)
