@@ -41,7 +41,7 @@ export const authenticate = (connection, body, callback) => {
     .select('password')
     .where(
       {
-        id: body.id,
+        name: body.name,
       },
     ).build()
 
