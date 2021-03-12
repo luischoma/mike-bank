@@ -86,6 +86,23 @@ ALTER TABLE `user`
 --
 ALTER TABLE `transaction`
   ADD CONSTRAINT `transaction_ibfk_1` FOREIGN KEY (`author`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+DELIMITER $$
+--
+-- Events
+--
+CREATE DEFINER=`root`@`%` EVENT `daily_interest` ON SCHEDULE EVERY 24 HOUR STARTS '2021-03-12 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+
+INSERT INTO transaction (author, amount, kind)
+SELECT u.id, TRUNCATE(u.balance * 0.1, 2), 'INTEREST'
+FROM user u
+WHERE u.balance > 0 ;  
+
+UPDATE user SET balance = TRUNCATE(balance + (balance * 0.1),2) WHERE balance > 0 ;
+
+END$$
+
+DELIMITER ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
