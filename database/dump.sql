@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 10, 2021 at 01:11 AM
+-- Generation Time: Mar 12, 2021 at 07:10 PM
 -- Server version: 8.0.23
 -- PHP Version: 7.4.15
 
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `transaction` (
-  `id` varchar(100) NOT NULL,
-  `kind` enum('WITHDRAWAL','PAYMENT','DEPOSIT') NOT NULL,
-  `author` varchar(100) NOT NULL,
+  `id` int NOT NULL,
+  `kind` enum('WITHDRAWAL','PAYMENT','DEPOSIT','INTEREST') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `author` int NOT NULL,
   `amount` double NOT NULL,
   `date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -42,7 +42,7 @@ CREATE TABLE `transaction` (
 --
 
 CREATE TABLE `user` (
-  `id` varchar(100) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(20) NOT NULL,
   `balance` double NOT NULL,
   `password` char(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
@@ -65,6 +65,18 @@ ALTER TABLE `transaction`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `transaction` and `user`
+--
+ALTER TABLE `transaction`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+
+ALTER TABLE `user`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- Constraints for dumped tables
 --
