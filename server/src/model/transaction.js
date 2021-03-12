@@ -17,7 +17,6 @@ export const byUserId = (connection, params, callback) => {
 export const create = (connection, body, callback) => {
   const sqlInsert = sqlQuery.insert()
   const {
-    id,
     kind,
     author,
     amount,
@@ -25,7 +24,6 @@ export const create = (connection, body, callback) => {
   } = body || {}
 
   const insertQuery = sqlInsert.into('transaction').set({
-    id,
     kind,
     author,
     amount,

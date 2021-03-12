@@ -18,14 +18,12 @@ export const getById = (connection, params, callback) => {
 export const create = (connection, body, callback) => {
   const sqlInsert = sqlQuery.insert()
   const {
-    id,
     name,
     balance,
     password,
   } = body || {}
 
   const insertQuery = sqlInsert.into('user').set({
-    id,
     name,
     balance,
     password: md5(password),
