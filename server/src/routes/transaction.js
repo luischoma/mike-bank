@@ -1,10 +1,13 @@
 import express from 'express'
+
+import authenticationMiddleware from '../middlewares/auth.js'
+
 import { transactionController } from '../controller/transaction.js'
 
 const transactionRouter = express.Router()
 
-transactionRouter.get('/user/:id', transactionController.getTransactionsByUserId)
+transactionRouter.get('/user', authenticationMiddleware, transactionController.getTransactionsByUserId)
 
-transactionRouter.post('/', transactionController.createTransaction)
+transactionRouter.post('/', authenticationMiddleware, transactionController.createTransaction)
 
 export default transactionRouter
