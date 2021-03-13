@@ -19,15 +19,13 @@ export const create = (connection, body, callback) => {
   const {
     kind,
     author,
-    amount,
-    date,
+    amount
   } = body || {}
 
   const insertQuery = sqlInsert.into('transaction').set({
     kind,
     author,
     amount,
-    date,
   }).build()
 
   connection.query(insertQuery, callback)
