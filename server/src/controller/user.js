@@ -9,17 +9,17 @@ import md5 from 'md5'
 export const userController = {
   createUser: (req, res) => {
     create(req.con, req.body, (error, results) => {
-      if (error) console.log('Erro ao fazer cadastro no banco ', error)
+      error
+      ? res.status(400).send({error: `Erro ao criar usuário no banco: ${error}`})
+      : res.status(201).end()
     })
-
-    res.end()
   },
 
   getUserById: (req, res) => {
     getById(req.con, req.params, (error, results) => {
-      if (error) console.log('Erro ao fazer query ao banco')
-
-      res.send(results)
+      error
+      ? res.status(404).send({error: `Erro ao buscar usuário no banco: ${error}`})
+      : res.status(200).send(results)
     })
   },
 
