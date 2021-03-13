@@ -1,11 +1,27 @@
-.input {
+@import '../../styles/styles.scss';
 
-    .input__label {
-        display: block;
-        text-align: left;
+.input {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        color: $black;
+        font-size: 18px;
+        text-transform: lowercase;
+        padding-left: 5px;
+        margin-bottom: 1px;
     }
 
-    .input__textfield {
-        
+    &__textfield {
+        color: $black;
+        background-color: $light-grey;
+        border-radius: 10px;
+        border: none;
+        height: 100%;
+        max-height: 45px;
+        max-width: 321px;
+        padding: 10px 10px;
+        width: 100%;
     }
 }
