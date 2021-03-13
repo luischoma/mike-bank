@@ -11,5 +11,5 @@ export const parseTransaction = ({
   kind,
   author,
   amount,
-  date: moment(date).format('YYYY-MM-DD HH:mm:ss'),
+  date: moment(date).format('HH:mm:ss DD-MM-YYYY'),
 })
