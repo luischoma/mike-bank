@@ -17,7 +17,7 @@
     },
     "scripts": {
         "start": "node index.js",
-        "test": "jest"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
     },
     "devDependencies": {
         "eslint": "^7.21.0",
@@ -25,10 +25,11 @@
         "eslint-plugin-import": "^2.22.1"
     },
     "jest": {
-        "testEnvironment": "node",
+        "testEnvironment": "jest-environment-node",
         "coveragePathIgnorePatterns": [
             "/node_modules/"
-        ]
+        ],
+        "transform": {}
     }
 }
 
