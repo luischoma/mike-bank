@@ -10720,6 +10720,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-saira@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-saira/-/typeface-saira-1.1.13.tgz#0f23739109a1ce3e6ec8c91edf417039f58b276e"
+  integrity sha512-zDuAHQ58S4XWRuXJMJH7qNqrFD4i74WUz6THoqvJ/mU0rQBMbPAYVBMY4APntcg+G8BXNKez29rvNNR1L2Zdzg==
+
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"

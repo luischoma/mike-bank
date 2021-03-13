@@ -13,6 +13,7 @@
     "react-scripts": "4.0.3",
     "reset-css": "^5.0.1",
     "sass": "^1.32.8",
+    "typeface-saira": "^1.1.13",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
