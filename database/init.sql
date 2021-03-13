@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 12, 2021 at 07:10 PM
+-- Generation Time: Mar 13, 2021 at 11:33 AM
 -- Server version: 8.0.23
 -- PHP Version: 7.4.15
 
@@ -32,7 +32,7 @@ CREATE TABLE `transaction` (
   `kind` enum('WITHDRAWAL','PAYMENT','DEPOSIT','INTEREST') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `author` int NOT NULL,
   `amount` double NOT NULL,
-  `date` date DEFAULT NULL
+  `date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -70,15 +70,21 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `transaction` and `user`
+-- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
-ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- Workaround to fix mysql bug (?)
+ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'senharoot';
+flush privileges;
 --
 
 --
