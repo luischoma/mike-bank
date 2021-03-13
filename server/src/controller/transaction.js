@@ -9,7 +9,7 @@ import {
 
 export const transactionController = {
   getTransactionsByUserId: (req, res) => {
-    byUserId(req.con, req.params, (error, results) => {
+    byUserId(req.con, req.userId, (error, results) => {
       error
       ? res.status(404).send({error: `Erro ao buscar transação no banco: ${error}`})
       : res.status(200).send(results.map((r) => parseTransaction(r)))

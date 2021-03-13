@@ -3,12 +3,12 @@ import md5 from 'md5'
 
 const sqlQuery = sql.Query()
 
-export const getById = (connection, params, callback) => {
+export const getById = (connection, userId, callback) => {
   const sqlSelect = sqlQuery.select()
 
   const selectQuery = sqlSelect.from('user').where(
     {
-      id: params.id,
+      id: userId,
     },
   ).build()
 
@@ -36,7 +36,7 @@ export const authenticate = (connection, body, callback) => {
   const sqlSelect = sqlQuery.select()
 
   const selectQuery = sqlSelect.from('user')
-    .select('password')
+    .select('password', 'id')
     .where(
       {
         name: body.name,

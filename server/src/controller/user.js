@@ -1,10 +1,13 @@
+import md5 from 'md5'
+import jwt from 'jsonwebtoken'
+
+import { JWTConfig } from '../configs/auth.js'
+
 import {
   create,
   getById,
   authenticate,
 } from '../model/user.js'
-
-import md5 from 'md5'
 
 export const userController = {
   createUser: (req, res) => {
@@ -16,7 +19,7 @@ export const userController = {
   },
 
   getUserById: (req, res) => {
-    getById(req.con, req.params, (error, results) => {
+    getById(req.con, req.userId, (error, results) => {
       error
       ? res.status(404).send({error: `Erro ao buscar usuário no banco: ${error}`})
       : res.status(200).send(results)
@@ -30,6 +33,9 @@ export const userController = {
       results[0].password === md5(req.body.password)
         ? res.status(200).send({
             status: 'Authenticated',
+            token: jwt.sign({
+              id: results[0].id
+            }, JWTConfig.secret,{expiresIn: JWTConfig.expiresIn})
           })
         : res.status(401).send({
           status: 'Unauthenticated',

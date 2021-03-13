@@ -2,12 +2,12 @@ import sql from 'sql-query'
 
 const sqlQuery = sql.Query()
 
-export const byUserId = (connection, params, callback) => {
+export const byUserId = (connection, userId, callback) => {
   const sqlSelect = sqlQuery.select()
 
   const selectQuery = sqlSelect.from('transaction').where(
     {
-      author: params.id,
+      author: userId,
     },
   ).build()
 
