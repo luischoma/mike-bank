@@ -1,0 +1,27 @@
+@import '../../styles/styles.scss';
+
+.statement {
+    display: flex;    
+    flex-direction: column;
+    
+    
+        &__row {
+        display: grid;
+        width: 100%;
+        padding: 0;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+        border-top: 1px solid black; 
+
+            &__item {
+                &--in {
+                    color: $green;
+                }
+            
+                &--out {
+                    color: $red;
+                }
+            }
+        }
+}
