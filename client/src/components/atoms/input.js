@@ -7,10 +7,10 @@ import './input.scss'
 export const Input = ({ textLabel }) => {
   return (  
     <div className="input">
-        <label for={snakeCase(textLabel)} className="input__label">
-            {textLabel}
-        </label>
-        <input type="text" id={snakeCase(textLabel)} className="input__textfield"/>
+      <label htmlFor={snakeCase(textLabel)} className="input__label">
+        {textLabel}
+      </label>
+      <input type="text" id={snakeCase(textLabel)} className="input__textfield"/>
     </div>
-    )
+  )
 }

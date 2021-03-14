@@ -1,20 +1,23 @@
 {
     "env": {
+        "browser": true,
         "es2021": true
     },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
         "sourceType": "module"
     },
+    "plugins": [
+        "react"
+    ],
     "rules": {
-        "padded-blocks": ["warn", "never"],
-        "semi": ["warn", "never"],
-    
-        "import/extensions": "off",
-        "import/imports-first": "off",
-        "import/no-dynamic-require": "off",
-        "import/no-extraneous-dependencies": "off",
-        "import/no-named-as-default": "off",
-        "import/no-unresolved": "off",
-        "import/prefer-default-export": "off",
-      }
+        "indent": [2,2]
+    }
 }
