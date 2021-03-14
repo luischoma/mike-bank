@@ -3,16 +3,18 @@
 .title {
     display: flex;
     flex-direction: column;
+    padding: 10px;
 
     &__name {
         color: $black;
-        font-size: 25px;
+        font-size: 45px;
         margin: 0;
     }
 
     &__description {
         color: $white;
         margin: 0;
+        font-size: 20px;
     }
     
 }
