@@ -1,0 +1,22 @@
+.user-options {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    
+    ul {
+        max-width: 300px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    
+    li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
