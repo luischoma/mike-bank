@@ -1,0 +1,15 @@
+.template {
+    &__body{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .template{
+        &__body {
+            align-items: center;
+        }
+    }
+}

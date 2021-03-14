@@ -10,7 +10,9 @@ export const Template = ({ className = '', children }) => {
   return (
     <div className={`template ${className}`}>
       <UserOptions />
-      {children}
+      <div className='template__body'>
+        {children}
+      </div>
     </div>
   )
 }
