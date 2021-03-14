@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {
-  Template,
+  LoggedInTemplate,
 } from '../components/templates'
 
 import {
@@ -18,13 +18,13 @@ import {
 export const Withdrawal = ({ children }) => {
   return (
     <div className='withdrawal'>
-      <Template className='withdrawal__template'>
+      <LoggedInTemplate className='withdrawal__template'>
         <PageTitle className='withdrawal__title' text='Retirar' />
         <Form>
           <Input textLabel='quantidade'/>
           <Button textButton='retirar'/>
         </Form>
-      </Template>
+      </LoggedInTemplate>
     </div>
   )
 }

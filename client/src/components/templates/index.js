@@ -1,5 +1,5 @@
-import { Template } from './template.js'
+import { LoggedInTemplate } from './logged-in-template.js'
 
 export {
-  Template
+  LoggedInTemplate
 }

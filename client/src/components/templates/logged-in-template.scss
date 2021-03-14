@@ -1,4 +1,4 @@
-.template {
+.logged-in-template {
     &__body{
         display: flex;
         flex-direction: column;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (min-width: 576px) {
-    .template{
+    .logged-in-template{
         &__body {
             align-items: center;
         }
