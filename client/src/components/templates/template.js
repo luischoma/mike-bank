@@ -4,9 +4,11 @@ import {
   UserOptions,
 } from '../molecules'
 
-export const Template = ({ children }) => {
+import './template.scss'
+
+export const Template = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`template ${className}`}>
       <UserOptions />
       {children}
     </div>
