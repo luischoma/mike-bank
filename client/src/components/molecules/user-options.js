@@ -10,7 +10,7 @@ import './user-options.scss'
 export const UserOptions = ({ name = 'Josue' }) => {
   return (
     <div className='user-options'>
-      <Title name={name} />
+      <Title name={name} text='suas opções são:'/>
 
       <ul>
         <li>
