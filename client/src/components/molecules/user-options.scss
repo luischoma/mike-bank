@@ -2,23 +2,33 @@
 
 .user-options {
     background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     
     ul {
+        flex-wrap: wrap;
         display: flex;
         flex-direction: row;
         list-style-type: none;
         width: 100%;
+        max-width: 500px;
         padding: 0;
         display: flex;
         justify-content: space-evenly;
-
     }
     
     li {
         display: inline-block;
         margin: 0 5px;
     }
+
+
 }
 
+@media screen and (min-width: 500px) {
+    .user-options {
+        align-items: center;
+    }
+}
