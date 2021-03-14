@@ -1,0 +1,23 @@
+@import '../../styles/styles.scss';
+
+.logo-header {
+    background-color: $primary-color;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__name {
+        font-size: 40px;
+        position: absolute;
+    }
+
+    &__logo{
+        width:  auto;
+        height: auto;
+        max-height: 30vh;
+        opacity: 0.3;
+    }
+}
