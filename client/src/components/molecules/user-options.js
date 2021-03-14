@@ -1,14 +1,17 @@
 import React from 'react'
 
 import {
+  Title,
   MenuButton
 } from '../atoms'
 
 import './user-options.scss'
 
-export const UserOptions = () => {
+export const UserOptions = ({ name = 'Josue' }) => {
   return (
     <div className='user-options'>
+      <Title name={name} />
+
       <ul>
         <li>
           <MenuButton >

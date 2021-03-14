@@ -1,11 +1,14 @@
+@import '../../styles/styles.scss';
+
 .user-options {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
+    background-color: $primary-color;
     height: 100%;
     width: 100%;
     
     ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
         width: 100%;
         padding: 0;
         display: flex;
