@@ -1,7 +1,6 @@
 import dotenv from 'dotenv'
 
-// TODO: Correctly import dotenv/config
-// dotenv.config()
+dotenv.config()
 
 export const DATABASE_CONFIG = {
   host: process.env.DB_HOST || 'localhost',
