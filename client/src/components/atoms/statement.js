@@ -5,6 +5,13 @@ import './statement.scss'
 
 const MONEY_OUT = ['WITHDRAWAL', 'PAYMENT']
 
+const KINDS = {
+  WITHDRAWAL: 'saque',
+  PAYMENT: 'pagamento',
+  DEPOSIT: 'depósito',
+  INTEREST: 'juros'
+}
+
 const fakeStatement = [
   {
     "id": 2,
@@ -27,7 +34,6 @@ const ListBody = ({ statements }) => {
     kind,
     id,
     date,
-    author,
     amount
   }) => {
     const isTakingMoney = MONEY_OUT.includes(kind)
@@ -40,7 +46,7 @@ const ListBody = ({ statements }) => {
           {date}
         </div>
         <div className={`statement__row__item ${classNameWithModifier}`}>
-          {author}
+          {KINDS[kind]}
         </div>
         <div className={`statement__row__item ${classNameWithModifier}`}>
           {`R$${amount}`}
