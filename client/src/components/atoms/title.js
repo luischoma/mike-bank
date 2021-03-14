@@ -3,7 +3,7 @@ import React from 'react'
 import './title.scss'
 
 export const Title = ({ name }) => {
-  return (  
+  return (
     <div className="title">
       <p className="title__name">
         {`${name},`}

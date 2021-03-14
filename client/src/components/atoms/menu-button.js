@@ -3,7 +3,7 @@ import React from 'react'
 import './menu-button.scss'
 
 export const MenuButton = ({ Icon, children, onClick }) => {
-  return (  
+  return (
     <div className="menu-button">
       <button onClick={onClick} className="menu-button__option">
             A

@@ -5,7 +5,7 @@ import snakeCase from 'lodash/snakeCase'
 import './input.scss'
 
 export const Input = ({ textLabel }) => {
-  return (  
+  return (
     <div className="input">
       <label htmlFor={snakeCase(textLabel)} className="input__label">
         {textLabel}
