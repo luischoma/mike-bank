@@ -1,0 +1,19 @@
+@import '../../styles/styles.scss';
+
+.title {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    &__name {
+        color: $black;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    &__description {
+        color: $white;
+        margin: 0;
+    }
+    
+}
