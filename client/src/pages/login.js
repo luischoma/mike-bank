@@ -46,7 +46,7 @@ export const Login = ({ children }) => {
 
           <Button textButton='foi'/>
 
-          <a href='google.com'> não tem conta? registre-se</a>
+          <a href='/register'> não tem conta? registre-se</a>
         </Form>
       </AnonymousTemplate>
     </div>
