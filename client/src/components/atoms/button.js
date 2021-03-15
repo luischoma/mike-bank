@@ -3,9 +3,9 @@ import React from 'react'
 
 import './button.scss'
 
-export const Button = ({ className = '', textButton, onClick }) => {
+export const Button = ({ className = '', textButton }) => {
   return (
-    <button className={`button ${className}`} onClick={onClick}>
+    <button className={`button ${className}`}>
       {textButton}
     </button>
   )
@@ -13,6 +13,5 @@ export const Button = ({ className = '', textButton, onClick }) => {
 
 Button.propTypes = {
   className: PropTypes.string,
-  textButton: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  textButton: PropTypes.string.isRequired
 }
