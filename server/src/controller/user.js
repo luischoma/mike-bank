@@ -30,16 +30,19 @@ export const userController = {
     authenticate(req.con, req.body, (error, results) => {
       if (error) console.log('Erro ao consultar banco ', error)
 
-      results[0].password === md5(req.body.password)
-        ? res.status(200).send({
+      if (results.length > 0) {
+        if(results[0].password === md5(req.body.password)) {
+          res.status(200).send({
             status: 'Authenticated',
             token: jwt.sign({
               id: results[0].id
             }, JWTConfig.secret,{expiresIn: JWTConfig.expiresIn})
           })
-        : res.status(401).send({
-          status: 'Unauthenticated',
-        })
+        }
+      } else {
+        res.status(401).send({
+        status: 'Unauthenticated',
+      })}
     })
   },
 }
