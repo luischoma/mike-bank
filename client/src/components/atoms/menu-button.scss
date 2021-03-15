@@ -17,6 +17,10 @@
         transition: .5s;
         height: 55px;
         width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
         
         &:hover {
             background-color: $light-grey;

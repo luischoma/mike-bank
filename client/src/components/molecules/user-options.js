@@ -14,22 +14,22 @@ export const UserOptions = ({ name }) => {
       <Title name={name} text='suas opções são:'/>
       <ul>
         <li>
-          <MenuButton path='/withdrawal'>
+          <MenuButton icon='S' path='/withdrawal'>
             Sacar
           </MenuButton>
         </li>
         <li>
-          <MenuButton path='/payment'>
+          <MenuButton icon='P' path='/payment'>
             Pagar
           </MenuButton>
         </li>
         <li>
-          <MenuButton path='/deposit'>
+          <MenuButton icon='D' path='/deposit'>
             Depositar
           </MenuButton>
         </li>
         <li>
-          <MenuButton path='/statement'>
+          <MenuButton icon='E' path='/statement'>
             Extrato
           </MenuButton>
         </li>
