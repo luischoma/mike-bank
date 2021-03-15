@@ -10,7 +10,8 @@ import {
 import {
   PageTitle,
   Input,
-  Button
+  Button,
+  ErrorMessage
 } from '../components/atoms'
 
 import {
@@ -44,6 +45,7 @@ export const Login = ({ children }) => {
           <Input textLabel='senha'/>
 
           <Button textButton='foi'/>
+          {error && <ErrorMessage text='login ou senha inválidos' />}
           <a href='google.com'> não tem conta? registre-se</a>
         </Form>
       </AnonymousTemplate>
