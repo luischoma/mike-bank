@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from './logo.svg'
-
+import { Route, Switch, BrowserRouter} from 'react-router-dom'
+import '../src/api/config/config.js'
 import 'typeface-saira'
 import './App.css'
 import { Button, Input } from './components/atoms'
