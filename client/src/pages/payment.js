@@ -17,15 +17,15 @@ import {
 } from '../components/organisms'
 
 import {
-  usePayment
-} from '../hooks/use-payment'
+  useAccountMovement
+} from '../hooks/use-account-movement'
 
 // eslint-disable-next-line
 export const Payment = ({ children }) => {
   const {
     error,
     executePost
-  } = usePayment()
+  } = useAccountMovement()
 
   return (
     <div className='payment'>

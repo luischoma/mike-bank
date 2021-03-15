@@ -1,6 +1,6 @@
 import useAxios from 'axios-hooks'
 
-export const usePayment = () => {
+export const useAccountMovement = () => {
   const [
     {data, error},
     executePost
