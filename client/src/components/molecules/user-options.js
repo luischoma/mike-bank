@@ -8,7 +8,7 @@ import {
 
 import './user-options.scss'
 
-export const UserOptions = ({ name = 'Josue' }) => {
+export const UserOptions = ({ name }) => {
   return (
     <div className='user-options'>
       <Title name={name} text='suas opções são:'/>
