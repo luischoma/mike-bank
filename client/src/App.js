@@ -6,7 +6,8 @@ import './App.css'
 
 import {
   Login,
-  Register
+  Register,
+  Payment
 } from './pages/'
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path='/register'>
             <Register />
+          </Route>
+          <Route path='/payment'>
+            <Payment />
           </Route>
         </Switch>
       </div>

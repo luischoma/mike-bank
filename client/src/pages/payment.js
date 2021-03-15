@@ -8,23 +8,43 @@ import {
 import {
   PageTitle,
   Input,
-  Button
+  Button,
+  ErrorMessage
 } from '../components/atoms'
 
 import {
   Form
 } from '../components/organisms'
 
+import {
+  usePayment
+} from '../hooks/use-payment'
+
 // eslint-disable-next-line
 export const Payment = ({ children }) => {
+  const {
+    error,
+    executePost
+  } = usePayment()
+
   return (
     <div className='payment'>
       <LoggedInTemplate className='payment__template'>
         <PageTitle className='payment__title' text='Pagamento' />
-        <Form>
-          <Input  textLabel='chave pix'/>
+        <Form onSubmit={([amount]) => executePost({
+          data: {
+            amount: -Math.abs(parseInt(amount[1]))
+          },
+          headers: {
+            Authorization: `Bearer ${window.sessionStorage.getItem('mikeBankToken')}`
+          }
+        })}>
           <Input textLabel='quantidade'/>
-          <Button textButton='enviar'/>
+
+          {/* TODO: Redirect automatically :( */}
+          {error && <ErrorMessage text='não foi possível processar seu pagamento. talvez você precise logar novamente.' />}
+
+          <Button textButton='pagar'/>
         </Form>
       </LoggedInTemplate>
     </div>
