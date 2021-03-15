@@ -33,6 +33,7 @@ export const Payment = ({ children }) => {
         <PageTitle className='payment__title' text='Pagamento' />
         <Form onSubmit={([amount]) => executePost({
           data: {
+            kind: 'PAYMENT',
             amount: -Math.abs(parseInt(amount[1]))
           },
           headers: {
