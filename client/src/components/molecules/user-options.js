@@ -12,25 +12,24 @@ export const UserOptions = ({ name = 'Josue' }) => {
   return (
     <div className='user-options'>
       <Title name={name} text='suas opções são:'/>
-
       <ul>
         <li>
-          <MenuButton >
+          <MenuButton path='/withdrawal'>
             Sacar
           </MenuButton>
         </li>
         <li>
-          <MenuButton >
+          <MenuButton path='/payment'>
             Pagar
           </MenuButton>
         </li>
         <li>
-          <MenuButton >
+          <MenuButton path='/deposit'>
             Depositar
           </MenuButton>
         </li>
         <li>
-          <MenuButton >
+          <MenuButton path='/statement'>
             Extrato
           </MenuButton>
         </li>

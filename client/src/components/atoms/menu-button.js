@@ -1,14 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from "react-router-dom"
 
 import './menu-button.scss'
 
 // eslint-disable-next-line
-export const MenuButton = ({ Icon, children, onClick }) => {
+export const MenuButton = ({ icon, path, children, onClick }) => {
   return (
     <div className="menu-button">
-      <button onClick={onClick} className="menu-button__option">
-      </button>
+      <Link onClick={onClick} to={path} className="menu-button__option">
+        {icon}
+      </Link>
       <p className="menu-button__description">
         {children}
       </p>
