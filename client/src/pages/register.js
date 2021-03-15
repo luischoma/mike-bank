@@ -18,9 +18,9 @@ import {
 
 export const Register = ({ children }) => {
   return (
-    <div className='login'>
-      <AnonymousTemplate className='login__template'>
-        <PageTitle className='login__title' text='cadastro' />
+    <div className='register'>
+      <AnonymousTemplate className='register__template'>
+        <PageTitle className='register__title' text='cadastro' />
         <Form>
           <Input textLabel=' seu login'/>
           <Input textLabel='sua senha'/>

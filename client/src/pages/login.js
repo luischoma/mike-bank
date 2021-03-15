@@ -21,7 +21,7 @@ export const Login = ({ children }) => {
     <div className='login'>
       <AnonymousTemplate className='login__template'>
         <PageTitle className='login__title' text='entrar' />
-        <Form>
+        <Form onSubmit={login}>
           <Input textLabel='login'/>
           <Input textLabel='senha'/>
 
