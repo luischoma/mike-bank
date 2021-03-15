@@ -1,0 +1,18 @@
+@import '../styles/styles.scss';
+
+.statement {
+    &__balance {
+        font-size: 30px;
+        &--positive {
+            color: $green;
+        }
+
+        &--negative {
+            color: $red;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+}

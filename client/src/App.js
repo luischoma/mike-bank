@@ -9,7 +9,9 @@ import {
   Login,
   Register,
   Payment,
-  Withdrawal
+  Withdrawal,
+  Deposit,
+  Statement
 } from './pages/'
 
 function App() {
@@ -28,6 +30,12 @@ function App() {
           </Route>
           <Route path='/withdrawal'>
             <Withdrawal />
+          </Route>
+          <Route path='/deposit'>
+            <Deposit />
+          </Route>
+          <Route path='/statement'>
+            <Statement />
           </Route>
         </Switch>
       </div>
