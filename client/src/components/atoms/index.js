@@ -6,6 +6,7 @@ import { Statement } from './statement.js'
 import { PageTitle } from './page-title.js'
 import { LogoHeader } from './logo-header.js'
 import { ErrorMessage } from './error-message.js'
+import { SuccessMessage } from './success-message.js'
 
 
 export {
@@ -16,5 +17,6 @@ export {
   Statement,
   PageTitle,
   LogoHeader,
-  ErrorMessage
+  ErrorMessage,
+  SuccessMessage
 }
