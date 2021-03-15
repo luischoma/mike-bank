@@ -14,17 +14,16 @@ export const byUserId = (connection, userId, callback) => {
   connection.query(selectQuery, callback)
 }
 
-export const create = (connection, body, callback) => {
+export const create = (connection, body, userId, callback) => {
   const sqlInsert = sqlQuery.insert()
   const {
     kind,
-    author,
     amount
   } = body || {}
 
   const insertQuery = sqlInsert.into('transaction').set({
     kind,
-    author,
+    author: userId,
     amount,
   }).build()
 

@@ -17,7 +17,7 @@ export const transactionController = {
   },
 
   createTransaction: (req, res) => {
-    create(req.con, req.body, (error, results) => {
+    create(req.con, req.body, req.userId, (error, results) => {
       error
       ? res.status(400).send({error: `Erro ao criar transação: ${error}`})
       : res.status(201).send({status: 'Success'})
