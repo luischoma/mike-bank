@@ -8,8 +8,6 @@ const userRouter = express.Router()
 
 userRouter.get('/', authenticationMiddleware, userController.getUserById)
 
-userRouter.put('/', authenticationMiddleware, userController.updateUserById)
-
 userRouter.post('/', userController.createUser)
 userRouter.post('/login', userController.authenticateUser)
 

@@ -7,7 +7,6 @@ import {
   create,
   getById,
   authenticate,
-  updateById
 } from '../model/user.js'
 
 export const userController = {
@@ -44,14 +43,6 @@ export const userController = {
         res.status(401).send({
         status: 'Unauthenticated',
       })}
-    })
-  },
-
-  updateUserById: (req, res) => {
-    updateById(req.con, req.body, req.userId, (error, results) => {
-      error
-      ? res.status(404).send({error: `Erro ao atualizar usuário no banco: ${error}`})
-      : res.status(200).send({status: 'Success'})
     })
   },
 }

@@ -45,10 +45,3 @@ export const authenticate = (connection, body, callback) => {
 
   connection.query(selectQuery, callback)
 }
-
-export const updateById = (connection, body, userId, callback) => {
-  // Had to build this query manually due to the lib not supporting update properly
-  const updateQuery = `UPDATE user SET balance = balance + ${body.amount} WHERE id = ${userId};`
-
-  connection.query(updateQuery, callback)
-}

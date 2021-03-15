@@ -27,5 +27,10 @@ export const create = (connection, body, userId, callback) => {
     amount,
   }).build()
 
-  connection.query(insertQuery, callback)
+  // Had to build this query manually due to the lib not supporting update properly
+  const updateQuery = `UPDATE user SET balance = balance + ${amount} WHERE id = ${userId};`
+
+  connection.query(insertQuery, () => {console.log('inserting transaction...')})
+  connection.query(updateQuery, callback)
+
 }
