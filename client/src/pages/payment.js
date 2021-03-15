@@ -21,7 +21,7 @@ export const Payment = ({ children }) => {
       <LoggedInTemplate className='payment__template'>
         <PageTitle className='payment__title' text='Pagamento' />
         <Form>
-          <Input  textLabel='chave pix:'/>
+          <Input  textLabel='chave pix'/>
           <Input textLabel='quantidade'/>
           <Button textButton='enviar'/>
         </Form>
