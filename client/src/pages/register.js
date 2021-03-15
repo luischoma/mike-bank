@@ -15,7 +15,7 @@ import {
   Form
 } from '../components/organisms'
 
-
+// eslint-disable-next-line
 export const Register = ({ children }) => {
   return (
     <div className='register'>

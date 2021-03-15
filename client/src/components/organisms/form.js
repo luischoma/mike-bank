@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import './form.scss'
 
 
-
+// eslint-disable-next-line
 export const Form = ({ children, onSubmit }) => {
   const handleSubmit = (event) => {
     event.preventDefault()

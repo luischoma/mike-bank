@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import './menu-button.scss'
 
+// eslint-disable-next-line
 export const MenuButton = ({ Icon, children, onClick }) => {
   return (
     <div className="menu-button">
