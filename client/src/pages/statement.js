@@ -42,6 +42,7 @@ export const Statement = ({ children }) => {
     <div className='statement'>
       <LoggedInTemplate className='statement__template'>
         <PageTitle className='statement__title' text='Extrato' />
+        {/* TODO: This should be an atom */}
         <p className='statement__description'>seu saldo é</p>
         <p className={`statement__balance statement__balance${userBalance > 0 ? '--positive' : '--negative' }`}>
           {`R$${userBalance}`}
