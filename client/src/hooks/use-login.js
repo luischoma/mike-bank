@@ -14,7 +14,7 @@ export const useLogin = () => {
     { manual: true}
   )
 
-  const { push }= useHistory()
+  const { push } = useHistory()
 
   useEffect(() => {
     if (data) {

@@ -42,8 +42,10 @@ export const Login = ({ children }) => {
           <Input textLabel='login'/>
           <Input textLabel='senha'/>
 
-          <Button textButton='foi'/>
           {error && <ErrorMessage text='login ou senha inválidos' />}
+
+          <Button textButton='foi'/>
+
           <a href='google.com'> não tem conta? registre-se</a>
         </Form>
       </AnonymousTemplate>
