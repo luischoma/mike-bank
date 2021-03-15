@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './form.scss'
 
@@ -11,3 +12,6 @@ export const Form = ({ children }) => {
 }
 
 
+Form.propTypes = {
+  children: PropTypes.node
+}

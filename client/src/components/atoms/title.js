@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './title.scss'
 
@@ -13,4 +14,9 @@ export const Title = ({ name, text }) => {
       </p>
     </div>
   )
+}
+
+Title.propTypes = {
+  name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }

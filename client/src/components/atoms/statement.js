@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './statement.scss'
 
@@ -65,4 +66,8 @@ export const Statement = ({ statements = fakeStatement }) => {
       <ListBody statements={statements} />
     </div>
   )
+}
+
+Statement.propTypes = {
+  statements: PropTypes.object
 }

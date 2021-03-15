@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
   LoggedInTemplate,
@@ -28,4 +29,8 @@ export const Payment = ({ children }) => {
       </LoggedInTemplate>
     </div>
   )
+}
+
+Payment.propTypes = {
+  children: PropTypes.node
 }

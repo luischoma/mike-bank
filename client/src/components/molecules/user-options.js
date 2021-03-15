@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
   Title,
@@ -38,4 +39,6 @@ export const UserOptions = ({ name = 'Josue' }) => {
   )
 }
 
-
+UserOptions.propTypes = {
+  name: PropTypes.string.isRequired
+}

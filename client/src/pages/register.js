@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
   AnonymousTemplate,
@@ -30,4 +31,8 @@ export const Register = ({ children }) => {
       </AnonymousTemplate>
     </div>
   )
+}
+
+Register.propTypes = {
+  children: PropTypes.node
 }

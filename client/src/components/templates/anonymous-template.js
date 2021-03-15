@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
   LogoHeader,
@@ -17,4 +18,8 @@ export const AnonymousTemplate = ({ className = '', children }) => {
   )
 }
 
+AnonymousTemplate.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node
+}
 

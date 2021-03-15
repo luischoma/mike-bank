@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
   UserOptions,
@@ -17,4 +18,8 @@ export const LoggedInTemplate = ({ className = '', children }) => {
   )
 }
 
+LoggedInTemplate.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node
+}
 
