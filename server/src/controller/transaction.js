@@ -20,7 +20,7 @@ export const transactionController = {
     create(req.con, req.body, (error, results) => {
       error
       ? res.status(400).send({error: `Erro ao criar transação: ${error}`})
-      : res.status(201).end()
+      : res.status(201).send({status: 'Success'})
     })
   },
 }
