@@ -9,7 +9,7 @@ export const Form = ({ children, onSubmit }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    const normalizedForm =  Array.from(event).filter(
+    const normalizedForm = Array.from(event.target).filter(
       (target) => target.tagName === "INPUT"
     ).map(
       (target) => [target.id, target.value]
