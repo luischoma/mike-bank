@@ -24,3 +24,5 @@ por se tratar de uma aplicação bancária, não gostaria que o sistema ficasse 
 O modelo gerado pelo PhPMyAdmin pode ser visto abaixo:
 
 ![Modelo do Banco de Dados](./images/database-model.png)
+
+O banco é responsável por realizar, a cada 24H, o evento de rentabilizar(configurado em 10%!!) o dinheiro atual da conta. Hoje, estas configurações estão hardcoded no SQL (como um evento SQL).
