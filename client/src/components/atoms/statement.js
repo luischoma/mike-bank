@@ -13,23 +13,6 @@ const KINDS = {
   INTEREST: 'juros'
 }
 
-const fakeStatement = [
-  {
-    "id": 2,
-    "kind": "WITHDRAWAL",
-    "author": 1,
-    "amount": 100,
-    "date": "12:42:20 13-03-2021"
-  },
-  {
-    "id": 3,
-    "kind": "DEPOSIT",
-    "author": 1,
-    "amount": 100,
-    "date": "14:30:18 13-03-2021"
-  },
-]
-
 const ListBody = ({ statements }) => {
   const items = statements.map(({
     kind,
@@ -60,7 +43,7 @@ const ListBody = ({ statements }) => {
 }
 
 
-export const Statement = ({ statements = fakeStatement }) => {
+export const Statement = ({ statements }) => {
   return (
     <div className="statement">
       <ListBody statements={statements} />
@@ -69,5 +52,5 @@ export const Statement = ({ statements = fakeStatement }) => {
 }
 
 Statement.propTypes = {
-  statements: PropTypes.object
+  statements: PropTypes.array
 }
